@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#define t 100
+
+int main() {
+    char str[t]; 
+    int tam, i, vog = 0;
+
+    printf("Digite uma string: ");
+    fgets(str, t, stdin); 
+    
+    tam = strlen(str);
+
+    
+    for (i = 0; i < tam; i++) {
+        if(str[i] == 'A' || str[i] == 'a') vog += 1;
+        else if(str[i] == 'E' || str[i] == 'e') vog += 1;
+        else if(str[i] == 'I' || str[i] == 'i') vog += 1;
+        else if(str[i] == 'O' || str[i] == 'o') vog += 1;
+        else if(str[i] == 'U' || str[i] == 'u') vog += 1;
+    }
+    
+    printf("\n\nA string tem %d vogais. ", vog);
+
+    return 0;
+}
