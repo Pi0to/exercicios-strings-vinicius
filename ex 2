@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#define t 100
+
+int main() {
+    char str[t]; 
+    int tam, i;
+
+    printf("Digite uma string: ");
+    fgets(str, t, stdin); 
+    
+    tam = strlen(str);
+
+    printf("String invertida: ");
+    
+    for (i = 0; i < tam; i+=2) {
+        printf("%c", str[i]);
+    }
+    
+    printf("\n");
+
+    return 0;
+}
